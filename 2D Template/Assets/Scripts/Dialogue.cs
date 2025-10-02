@@ -14,8 +14,8 @@ public class Dialogue : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        textComponent.text = string.Empty;
-        StartDialogue();
+        
+        
     }
 
     // Update is called once per frame
@@ -34,8 +34,9 @@ public class Dialogue : MonoBehaviour
             }
         }
     }
-    void StartDialogue()
+    public void StartDialogue()
     {
+        textComponent.text = string.Empty;
         index = 0;
         StartCoroutine(TypeLine());
     }
