@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] public HeatFillNumber heatFillNumberScript;
+    [SerializeField] public Countdown countdownScript;
     [SerializeField] private float moveSpeed = 1f;
 
     private PlayerControls playerControls;
@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Shade")
         {
-            console = true;
+            countdownScript.isCountingDown = false;
             Debug.Log("You Are In The Shade");
             
         }
@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Shade")
         {
-            console = false;
+            countdownScript.isCountingDown = true;
             Debug.Log("You Are Out Of The Shade");
         }
     }
