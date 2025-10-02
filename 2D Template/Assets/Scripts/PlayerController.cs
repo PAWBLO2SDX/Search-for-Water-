@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] public HeatFillNumber heatFillNumberScript;
     [SerializeField] private float moveSpeed = 1f;
 
     private PlayerControls playerControls;
@@ -9,6 +10,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator myAnimator;
     private SpriteRenderer mySpriteRender;
+
+    public bool console = false;
 
     private void Awake()
     {
@@ -59,6 +62,24 @@ public class PlayerController : MonoBehaviour
         else
         {
             mySpriteRender.flipX = false;
+        }
+    }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Shade")
+        {
+            console = true;
+            Debug.Log("You Are In The Shade");
+            
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Shade")
+        {
+            console = false;
+            Debug.Log("You Are Out Of The Shade");
         }
     }
 }
