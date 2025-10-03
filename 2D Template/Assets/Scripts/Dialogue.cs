@@ -1,11 +1,13 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.Events;
 
 
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
+    public UnityEvent onDialogue;
     public string[] lines;
     public float textSpeed;
 
@@ -60,6 +62,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            onDialogue.Invoke();
             gameObject.SetActive(false);
         }
     }
