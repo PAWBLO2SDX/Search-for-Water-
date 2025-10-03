@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Shade
+  - ShadeDay
   layers:
   - Default
   - TransparentFX
