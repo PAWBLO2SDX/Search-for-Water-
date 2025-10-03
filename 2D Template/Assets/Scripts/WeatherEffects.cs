@@ -6,17 +6,17 @@ public class WeatherEffects : MonoBehaviour
     private WeatherEffectParameters currentWeatherEffectParameters;
     private WeatherEffectParameters targetWeatherEffectParameters;
 
-    [SerializeField] WeatherEffectsParameters sunnyWeatherParameters;
-    [SerializeField] WeatherEffectsParameters heatWaveWeatherParameters;
-    [SerializeField] WeatherEffectsParameters cloudyWeatherParameters;
-    [SerializeField] WeatherEffectsParameters windyWeatherParameters;
-    [SerializeField] WeatherEffectsParameters sandStormWeatherParameters;
+    [SerializeField] WeatherEffectParameters sunnyWeatherParameters;
+    [SerializeField] WeatherEffectParameters heatWaveWeatherParameters;
+    [SerializeField] WeatherEffectParameters cloudyWeatherParameters;
+    [SerializeField] WeatherEffectParameters windyWeatherParameters;
+    [SerializeField] WeatherEffectParameters sandStormWeatherParameters;
 
-    [SerializeField] SunnyEffects sunnyEffects;
-    [SerializeField] HeatWaveEffects heatWaveEffects;
-    [SerializeField] CloudEffects cloudEffects;
-    [SerializeField] WindEffects windEffects;
-    [SerializeField] SandStormEffects sandStormEffects;
+   // [SerializeField] SunnyEffect sunnyEffect;
+    //[SerializeField] HeatWaveEffect heatWaveEffect;
+    //[SerializeField] CloudEffect cloudEffect;
+    //[SerializeField] WindEffect windEffect;
+   // [SerializeField] SandStormEffect sandStormEffect;
 
 
     void Awake()
@@ -27,7 +27,7 @@ public class WeatherEffects : MonoBehaviour
 
     void Start()
     {
-        SetWeatherEffect(WeaterState.State.Sunny);
+        SetWeatherEffect(WeatherState.State.Sunny);
     }
 
     public void SetWeatherEffect(WeatherState.State weatherState)
@@ -50,7 +50,7 @@ public class WeatherEffects : MonoBehaviour
                 targetWeatherEffectParameters = sandStormWeatherParameters;
                 break;
         }
-        StartCorutine(TransitionToNextEffect());
+        StartCoroutine(TransitionToNextEffect());
     }
 
     private IEnumerator TransitionToNextEffect()
@@ -67,8 +67,63 @@ public class WeatherEffects : MonoBehaviour
 
             currentWeatherEffectParameters = LerpWeatherEffectParameters(startWeatherEffectParameters, targetWeatherEffectParameters, t);
             UpdateWeatherEffects(currentWeatherEffectParameters);
+            yield return null;
         }
         currentWeatherEffectParameters = targetWeatherEffectParameters;
         UpdateWeatherEffects(currentWeatherEffectParameters);
     }
+  
+    private WeatherEffectParameters LerpWeatherEffectParameters(WeatherEffectParameters from, WeatherEffectParameters to, float t)
+    {
+        WeatherEffectParameters result = new WeatherEffectParameters();
+        result.cloudColor = Color.Lerp(from.cloudColor, to.cloudColor, t);
+        result.cloudEmissionRate = Mathf.Lerp(from.cloudEmissionRate, to.cloudEmissionRate, t);
+        result.sandSpeed = Mathf.Lerp(from.sandSpeed, to.sandSpeed, t);
+        result.windSpeed = Mathf.Lerp(from.windSpeed, to.windSpeed, t);
+        //result.nameActive = to.nameActive;
+        result.sunRaysActive = to.sunRaysActive;
+        return result;
+    }
+
+    private void UpdateWeatherEffects(WeatherEffectParameters weatherEffectParameters)
+    {
+        //cloudEffect.SetCloudDarkness(weatherEffectParameters.cloudColor);
+        //cloudEffect.SetCloudEmissionRate(weatherEffectParameters.cloudEmissionRate);
+       // sandStormEffect.SetSandStormSpeed(weatherEffectParameters.sandSpeed);
+       // windEffect.SetWindSpeed(weatherEffectParameters.windSpeed);
+
+        //if (weatherEffectParameters.nameActive) nameEffect.ActivateNameEffect();
+        //else nameEffect.DeactivateNameEffect();
+
+       // if (weatherEffectParameters.sunRaysActive) sunnyEffect.ActivateSunnyEffect();
+       // else sunnyEffect.DeactivateSunnyEffect();
+    }
+
+    public WeatherEffectParameters GetCurrentWeatherEffectParameters()
+    {
+        return currentWeatherEffectParameters;
+    }
+
+   // public SunnyEffect GetSunnyEffect()
+   // {
+     //   return sunnyEffect;
+  //  }
+
+   // public CloudEffect GetCloudEffect()
+   // {
+  //      return cloudEffect;
+  //  }
+  //  public WindEffect GetWindEffect()
+  //  {
+  //      return windEffect;
+  //  }
+ //   public SandStormEffect GetSandStormEffect()
+ //   {
+ //       return sandStormEffect;
+ //   }
+ //   public HeatWaveEffect GetHeatWaveEffect()
+ //   {
+ //       return heatWaveEffect;
+  //  }
+
 }
