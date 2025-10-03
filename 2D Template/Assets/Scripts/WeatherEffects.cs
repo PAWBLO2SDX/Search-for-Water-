@@ -12,11 +12,11 @@ public class WeatherEffects : MonoBehaviour
     [SerializeField] WeatherEffectParameters windyWeatherParameters;
     [SerializeField] WeatherEffectParameters sandStormWeatherParameters;
 
-   // [SerializeField] SunnyEffect sunnyEffect;
-    //[SerializeField] HeatWaveEffect heatWaveEffect;
-    //[SerializeField] CloudEffect cloudEffect;
-    //[SerializeField] WindEffect windEffect;
-   // [SerializeField] SandStormEffect sandStormEffect;
+    [SerializeField] SunnyEffect sunnyEffect;
+    [SerializeField] HeatWaveEffect heatWaveEffect;
+    [SerializeField] CloudEffect cloudEffect;
+    [SerializeField] WindEffect windEffect;
+    [SerializeField] SandStormEffect sandStormEffect;
 
 
     void Awake()
@@ -87,16 +87,16 @@ public class WeatherEffects : MonoBehaviour
 
     private void UpdateWeatherEffects(WeatherEffectParameters weatherEffectParameters)
     {
-        //cloudEffect.SetCloudDarkness(weatherEffectParameters.cloudColor);
-        //cloudEffect.SetCloudEmissionRate(weatherEffectParameters.cloudEmissionRate);
-       // sandStormEffect.SetSandStormSpeed(weatherEffectParameters.sandSpeed);
-       // windEffect.SetWindSpeed(weatherEffectParameters.windSpeed);
+       // cloudEffect.SetCloudDarkness(weatherEffectParameters.cloudColor);
+      //  cloudEffect.SetCloudEmissionRate(weatherEffectParameters.cloudEmissionRate);
+      //  sandStormEffect.SetSandStormSpeed(weatherEffectParameters.sandSpeed);
+        windEffect.SetWindSpeed(weatherEffectParameters.windSpeed);
 
         //if (weatherEffectParameters.nameActive) nameEffect.ActivateNameEffect();
         //else nameEffect.DeactivateNameEffect();
 
        // if (weatherEffectParameters.sunRaysActive) sunnyEffect.ActivateSunnyEffect();
-       // else sunnyEffect.DeactivateSunnyEffect();
+      //  else sunnyEffect.DeactivateSunnyEffect();
     }
 
     public WeatherEffectParameters GetCurrentWeatherEffectParameters()
@@ -104,26 +104,26 @@ public class WeatherEffects : MonoBehaviour
         return currentWeatherEffectParameters;
     }
 
-   // public SunnyEffect GetSunnyEffect()
-   // {
-     //   return sunnyEffect;
-  //  }
+    public SunnyEffect GetSunnyEffect()
+    {
+        return sunnyEffect;
+    }
 
-   // public CloudEffect GetCloudEffect()
-   // {
-  //      return cloudEffect;
-  //  }
-  //  public WindEffect GetWindEffect()
-  //  {
-  //      return windEffect;
-  //  }
- //   public SandStormEffect GetSandStormEffect()
- //   {
- //       return sandStormEffect;
- //   }
- //   public HeatWaveEffect GetHeatWaveEffect()
- //   {
- //       return heatWaveEffect;
-  //  }
+    public CloudEffect GetCloudEffect()
+    {
+        return cloudEffect;
+    }
+    public WindEffect GetWindEffect()
+    {
+        return windEffect;
+    }
+    public SandStormEffect GetSandStormEffect()
+    {
+        return sandStormEffect;
+    }
+    public HeatWaveEffect GetHeatWaveEffect()
+    {
+        return heatWaveEffect;
+    }
 
 }

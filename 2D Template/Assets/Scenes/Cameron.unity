@@ -346,6 +346,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &235318630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 235318631}
+  m_Layer: 0
+  m_Name: WeatherEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &235318631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235318630}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 520.5497, y: 285.71262, z: -0.46125892}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &260139653
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,6 +957,137 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &532132573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 532132578}
+  - component: {fileID: 532132577}
+  - component: {fileID: 532132576}
+  - component: {fileID: 532132575}
+  - component: {fileID: 532132574}
+  m_Layer: 0
+  m_Name: WeatherSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &532132574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532132573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 854be7819233d6c4188305372a31d516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weatherTimer: {fileID: 0}
+  weatherState: {fileID: 0}
+  weatherEffects: {fileID: 0}
+--- !u!114 &532132575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532132573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dab873d125e1bb44a44386a95f95050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sunnyWeatherParameters:
+    cloudColor: {r: 0, g: 0, b: 0, a: 0}
+    cloudEmissionRate: 0
+    sandSpeed: 0
+    windSpeed: 0
+    sunRaysActive: 0
+  heatWaveWeatherParameters:
+    cloudColor: {r: 0, g: 0, b: 0, a: 0}
+    cloudEmissionRate: 0
+    sandSpeed: 0
+    windSpeed: 0
+    sunRaysActive: 0
+  cloudyWeatherParameters:
+    cloudColor: {r: 0, g: 0, b: 0, a: 0}
+    cloudEmissionRate: 0
+    sandSpeed: 0
+    windSpeed: 0
+    sunRaysActive: 0
+  windyWeatherParameters:
+    cloudColor: {r: 0, g: 0, b: 0, a: 0}
+    cloudEmissionRate: 0
+    sandSpeed: 0
+    windSpeed: 0
+    sunRaysActive: 0
+  sandStormWeatherParameters:
+    cloudColor: {r: 0, g: 0, b: 0, a: 0}
+    cloudEmissionRate: 0
+    sandSpeed: 0
+    windSpeed: 0
+    sunRaysActive: 0
+  sunnyEffect: {fileID: 0}
+  heatWaveEffect: {fileID: 0}
+  cloudEffect: {fileID: 0}
+  windEffect: {fileID: 0}
+  sandStormEffect: {fileID: 0}
+--- !u!114 &532132576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532132573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 342979dcdc817094ab83ad5b96f84251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeatherStateOrder: 03000000010000000000000003000000000000000200000001000000040000000000000001000000
+--- !u!114 &532132577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532132573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4adfc2967115ce942963e7cc6f023b48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+  timesForWeatherStates:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+--- !u!4 &532132578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532132573}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 520.5497, y: 285.71262, z: -0.46125892}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &570669568
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,7 +1387,7 @@ GameObject:
   - component: {fileID: 866158312}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2517,3 +2679,5 @@ SceneRoots:
   - {fileID: 506412100}
   - {fileID: 221372411}
   - {fileID: 708453308}
+  - {fileID: 532132578}
+  - {fileID: 235318631}
