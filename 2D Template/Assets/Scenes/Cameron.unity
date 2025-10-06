@@ -4630,7 +4630,7 @@ ParticleSystem:
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
-    octaveScale: 2
+    octaveScale: 1
     quality: 2
     scrollSpeed:
       serializedVersion: 2
@@ -4848,7 +4848,7 @@ ParticleSystem:
     positionAmount:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.11
+      scalar: 2.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4901,7 +4901,7 @@ ParticleSystem:
     rotationAmount:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4.24
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -7176,7 +7176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 566e7cbe09f202743ab3d4e38919dabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerControllerScript: {fileID: 0}
+  playerControllerScript: {fileID: 866158307}
 --- !u!61 &1926598158
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7211,7 +7211,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.4766264, y: 0.02590704}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7221,7 +7221,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 21.263983, y: 12.206796}
   m_EdgeRadius: 0
 --- !u!1 &2097151730
 GameObject:
