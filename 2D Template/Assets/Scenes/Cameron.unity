@@ -567,7 +567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &456193088
 RectTransform:
   m_ObjectHideFlags: 0
@@ -717,7 +717,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &506412098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1822,6 +1822,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1631425193}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
   - Hour: 19
     Minute: 0
     _action:
@@ -1834,6 +1846,18 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: -1669665696261636895, guid: c4cc67eca0580f641843c39fe20c5b85, type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1631425193}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2314,7 +2338,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1631425195
 Transform:
   m_ObjectHideFlags: 0
@@ -2547,7 +2571,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1888200094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2671,7 +2695,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 866158310}
   - {fileID: 1736984723}
-  - {fileID: 980604953}
   - {fileID: 1631425195}
   - {fileID: 516782331}
   - {fileID: 1576177115}
@@ -2681,3 +2704,4 @@ SceneRoots:
   - {fileID: 708453308}
   - {fileID: 532132578}
   - {fileID: 235318631}
+  - {fileID: 980604953}

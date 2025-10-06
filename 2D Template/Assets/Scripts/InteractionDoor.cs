@@ -7,10 +7,10 @@ public class InteractionDoor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && (InteractionKey.keyNeeded = true ))
-        {
-            onInteract.Invoke();
-            gameObject.SetActive(false);
-        }
+       // if (collision.CompareTag("Player") && (InteractionKey.keyNeeded = true ))
+       // {
+          //  onInteract.Invoke();
+      //      gameObject.SetActive(false);
+       // }
     }
 }
