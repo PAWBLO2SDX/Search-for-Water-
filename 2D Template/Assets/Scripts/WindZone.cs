@@ -2,6 +2,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class WindZone : MonoBehaviour
 {
+    public PlayerController playerControllerScript;
     public delegate void WindZoneTrigger(Collider2D other);
     public event WindZoneTrigger OnWindZoneTrigger;
     private bool playerInside = false;
@@ -10,6 +11,7 @@ public class WindZone : MonoBehaviour
     void OnEnable()
     {
         WindEffect.OnWindEffectToggled += ToggleWindZone;
+        playerControllerScript.moveSpeed = 1;
     }
 
     void OnDisable()
