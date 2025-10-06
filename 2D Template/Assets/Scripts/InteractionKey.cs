@@ -12,7 +12,6 @@ public class InteractionKey : MonoBehaviour
         {
             onInteract.Invoke();
             gameObject.SetActive(false);
-            keyNeeded = true;
         }
     }
 }
