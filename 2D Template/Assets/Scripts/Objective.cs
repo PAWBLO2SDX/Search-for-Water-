@@ -1,13 +1,11 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
-using UnityEngine.Events;
 
 
-public class Dialogue : MonoBehaviour
+public class Objective: MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
-    public UnityEvent onDialogue;
     public string[] lines;
     public float textSpeed;
 
@@ -16,27 +14,16 @@ public class Dialogue : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-        
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (textComponent.text == lines[index])
-            {
-                NextLine();
-            }
-            else
-            {
-                StopAllCoroutines();
-                textComponent.text = lines[index];
-            }
-        }
+        
     }
-    public void StartDialogue()
+    public void StartObjective()
     {
         textComponent.text = string.Empty;
         index = 0;
@@ -62,7 +49,6 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            onDialogue.Invoke();
             gameObject.SetActive(false);
         }
     }

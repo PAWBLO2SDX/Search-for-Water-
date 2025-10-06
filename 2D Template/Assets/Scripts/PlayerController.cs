@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] public HeatFillNumber heatFillNumberScript;
+    [SerializeField] public Countdown countdownScript;
     [SerializeField] private float moveSpeed = 1f;
 
     private PlayerControls playerControls;
@@ -12,6 +13,10 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer mySpriteRender;
 
     public bool console = false;
+
+    public GameObject warning;
+    public GameObject warningSfx;
+    public Slider slider;
 
     private void Awake()
     {
@@ -66,9 +71,13 @@ public class PlayerController : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Shade")
+        if (collision.gameObject.tag == "Shade" || collision.gameObject.tag == "ShadeDay")
         {
+            slider.value = 0;
             console = true;
+            warning.SetActive(false);
+            warningSfx.SetActive(false);
+            countdownScript.isCountingDown = false;
             Debug.Log("You Are In The Shade");
             
         }
@@ -76,9 +85,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Shade")
+        if (collision.gameObject.tag == "Shade" || collision.gameObject.tag == "ShadeDay")
         {
+            slider.value = countdownScript.currentCounter;
             console = false;
+            countdownScript.isCountingDown = true;
             Debug.Log("You Are Out Of The Shade");
         }
     }
