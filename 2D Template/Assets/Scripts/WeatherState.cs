@@ -18,6 +18,7 @@ public class WeatherState : MonoBehaviour
 
     public State[] WeatherStateOrder = new State[]
     {
+        State.Windy,
         State.Cloudy,
         State.Sunny,
         State.SandStorm,
@@ -25,7 +26,6 @@ public class WeatherState : MonoBehaviour
         State.SandStorm,
         State.HeatWave,
         State.Sunny,
-        State.Windy,
         State.SandStorm,
         State.Sunny,
     };
