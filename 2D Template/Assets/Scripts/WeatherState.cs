@@ -9,11 +9,11 @@ public class WeatherState : MonoBehaviour
 
     public enum State
     {
+        Windy,
         SandStorm,
         Sunny,
         HeatWave,
         Cloudy,
-        Windy,
     }
 
     public State[] WeatherStateOrder = new State[]
