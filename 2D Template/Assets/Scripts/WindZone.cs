@@ -11,7 +11,7 @@ public class WindZone : MonoBehaviour
     void OnEnable()
     {
         WindEffect.OnWindEffectToggled += ToggleWindZone;
-        playerControllerScript.moveSpeed = 1;
+        playerControllerScript.moveSpeed = 0;
     }
 
     void OnDisable()
