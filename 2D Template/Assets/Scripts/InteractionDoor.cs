@@ -5,12 +5,14 @@ public class InteractionDoor : MonoBehaviour
 {
     public UnityEvent onInteract;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-       // if (collision.CompareTag("Player") && (InteractionKey.keyNeeded = true ))
-       // {
-          //  onInteract.Invoke();
-      //      gameObject.SetActive(false);
-       // }
+        if (collision.gameObject.CompareTag("Player"))
+        {
+             
+           onInteract.Invoke();
+           gameObject.SetActive(false);
+            
+        }
     }
 }
