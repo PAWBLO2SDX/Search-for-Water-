@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] public Countdown countdownScript;
-    [SerializeField] private float moveSpeed = 1f;
+    public float moveSpeed = 1f;
 
     private PlayerControls playerControls;
     private Vector2 movement;

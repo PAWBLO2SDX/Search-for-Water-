@@ -72,10 +72,10 @@ public class WindEffect : MonoBehaviour
 
     public void SetWindDirection(int direction)
     {
-        foreach (ParticleSystem ps in windParticleSystems)
-        {
-            ps.transform.rotation = Quaternion.Euler(0, (windDirection * 90) - 90, 0);
-        }
+       // foreach (ParticleSystem ps in windParticleSystems)
+       // {
+         //   ps.transform.rotation = Quaternion.Euler(0, 0, 0);
+       // }
     }
 
     public void SetWindSpeed(float speed)
