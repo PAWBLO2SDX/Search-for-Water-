@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Stats : MonoBehaviour
 {
+    
     [Header("Bars")]
    [Tooltip("This entity's max health.")][Range(1,100)] public float maxHealth;
     [HideInInspector] public float currentHealth;
@@ -26,4 +27,19 @@ public class Stats : MonoBehaviour
         currentMana = maxMana;
     }
 
+    private void Update()
+    {
+        if(currentHealth<= 0)
+        {
+            Destroy(gameObject);
+        }
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        if (currentMana > maxMana) 
+        {
+            currentMana = maxMana;
+        }
+    }
 }
