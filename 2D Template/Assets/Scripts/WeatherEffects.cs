@@ -80,7 +80,7 @@ public class WeatherEffects : MonoBehaviour
         result.cloudEmissionRate = Mathf.Lerp(from.cloudEmissionRate, to.cloudEmissionRate, t);
         result.sandSpeed = Mathf.Lerp(from.sandSpeed, to.sandSpeed, t);
         result.windSpeed = Mathf.Lerp(from.windSpeed, to.windSpeed, t);
-        //result.nameActive = to.nameActive;
+        result.heatWaveActive = to.heatWaveActive;
         result.sunRaysActive = to.sunRaysActive;
         return result;
     }
@@ -91,12 +91,11 @@ public class WeatherEffects : MonoBehaviour
       //  cloudEffect.SetCloudEmissionRate(weatherEffectParameters.cloudEmissionRate);
       //  sandStormEffect.SetSandStormSpeed(weatherEffectParameters.sandSpeed);
         windEffect.SetWindSpeed(weatherEffectParameters.windSpeed);
+        cloudEffect.SetCloudSpeed(weatherEffectParameters.cloudSpeed);
 
-        //if (weatherEffectParameters.nameActive) nameEffect.ActivateNameEffect();
-        //else nameEffect.DeactivateNameEffect();
-
-       // if (weatherEffectParameters.sunRaysActive) sunnyEffect.ActivateSunnyEffect();
-      //  else sunnyEffect.DeactivateSunnyEffect();
+        heatWaveEffect.HeatWaveBlur.SetActive(true);
+        //if (weatherEffectParameters.sunRaysActive) sunnyEffect.ActivateSunnyEffect();
+        //  else sunnyEffect.DeactivateSunnyEffect();
     }
 
     public WeatherEffectParameters GetCurrentWeatherEffectParameters()
