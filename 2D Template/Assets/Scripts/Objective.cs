@@ -1,6 +1,7 @@
-using UnityEngine;
-using TMPro;
 using System.Collections;
+using TMPro;
+using UnityEngine;
+using UnityEngine.Events;
 
 
 public class Objective: MonoBehaviour
@@ -8,6 +9,7 @@ public class Objective: MonoBehaviour
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
+    public UnityEvent onObjective;
 
     private int index;
 
@@ -37,19 +39,10 @@ public class Objective: MonoBehaviour
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
+            
+            
         }
+        onObjective.Invoke();
     }
-    public void NextLine()
-    {
-        if (index < lines.Length - 1)
-        {
-            index++;
-            textComponent.text = string.Empty;
-            StartCoroutine(TypeLine());
-        }
-        else
-        {
-            gameObject.SetActive(false);
-        }
-    }
+   
 }

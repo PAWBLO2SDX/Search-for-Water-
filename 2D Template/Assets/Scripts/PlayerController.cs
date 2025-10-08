@@ -6,8 +6,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public Countdown countdownScript;
     public float moveSpeed = 1f;
 
-    private PlayerControls playerControls;
-    private Vector2 movement;
+    public  PlayerControls playerControls;
+    public Vector2 movement;
     private Rigidbody2D rb;
     private Animator myAnimator;
     private SpriteRenderer mySpriteRender;
