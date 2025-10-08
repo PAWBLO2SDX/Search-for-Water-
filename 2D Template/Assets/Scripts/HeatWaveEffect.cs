@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class HeatWaveEffect : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject HeatWaveBlur;
+
     void Start()
     {
-        
+        HeatWaveBlur.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
