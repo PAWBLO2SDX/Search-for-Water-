@@ -8,6 +8,7 @@ public class WeatherEffectParameters
     [Range(0, 1000)] public float cloudEmissionRate;
     [Range(0, 1000)] public float sandSpeed;
     [Range(0, 1000)] public float windSpeed;
-    // public bool nameActive;
+    [Range(0, 1000)] public float cloudSpeed;
+    public bool heatWaveActive;
     public bool sunRaysActive;
 }
