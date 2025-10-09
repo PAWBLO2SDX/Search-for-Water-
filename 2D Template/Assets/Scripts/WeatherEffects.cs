@@ -98,6 +98,7 @@ public class WeatherEffects : MonoBehaviour
         //  sandStormEffect.SetSandStormSpeed(weatherEffectParameters.sandSpeed);
         windEffect.SetWindSpeed(weatherEffectParameters.windSpeed);
         cloudEffect.SetCloudSpeed(weatherEffectParameters.cloudSpeed);
+        sandStormEffect.SetSandSpeed(weatherEffectParameters.sandSpeed);
 
         if (weatherEffectParameters.heatWaveActive) heatWaveEffect.HeatWaveBlur.SetActive(true);
         else heatWaveEffect.HeatWaveBlur.SetActive(false);
@@ -105,8 +106,8 @@ public class WeatherEffects : MonoBehaviour
         if (weatherEffectParameters.sunRaysActive) sunnyEffect.Sun.SetActive(true);
         else sunnyEffect.Sun.SetActive(false);
 
-        //if (weatherEffectParameters.sandBlurActive) sandStormEffect.SandBlur.SetActive(true);
-       // else sandStormEffect.SandBlur.SetActive(false);
+        if (weatherEffectParameters.sandBlurActive) sandStormEffect.SandBlur.SetActive(true);
+        else sandStormEffect.SandBlur.SetActive(false);
     }
 
     public WeatherEffectParameters GetCurrentWeatherEffectParameters()
