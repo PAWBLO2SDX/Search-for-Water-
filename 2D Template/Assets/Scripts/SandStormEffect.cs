@@ -21,6 +21,8 @@ public class SandStormEffect : MonoBehaviour
 
     public static event SandStormEffectToggler OnSandStormEffectToggled;
 
+    public GameObject SandBlur;
+
     void Awake()
     {
         if (!playerController3) Debug.LogError("SandStormEffect: PlayerController not set.");
