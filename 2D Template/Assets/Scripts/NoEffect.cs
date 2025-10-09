@@ -1,12 +1,11 @@
 using UnityEngine;
 
-public class SunnyEffect : MonoBehaviour
+public class NoEffect : MonoBehaviour
 {
-    public GameObject Sun;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Sun.SetActive(false);
+        
     }
 
     // Update is called once per frame

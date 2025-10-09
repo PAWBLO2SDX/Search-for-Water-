@@ -14,10 +14,12 @@ public class WeatherState : MonoBehaviour
         Sunny,
         HeatWave,
         Cloudy,
+        No,
     }
 
     public State[] WeatherStateOrder = new State[]
     {
+        State.Sunny,
         State.Windy,
         State.Cloudy,
         State.Sunny,

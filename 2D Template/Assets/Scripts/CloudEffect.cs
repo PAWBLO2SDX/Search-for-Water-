@@ -95,7 +95,7 @@ public class CloudEffect : MonoBehaviour
             main.simulationSpeed = speed;
         }
 
-        float cloudEffectResistance = 1 + (PlayerPrefs.GetInt("playerWindResistance", 0) * 0.1f);
+        float cloudEffectResistance = 1 + (PlayerPrefs.GetInt("playerCloudResistance", 0) * 0.1f);
         if (speed >= cloudEffectResistance) OnCloudEffectToggled?.Invoke(true);
         else OnCloudEffectToggled?.Invoke(false);
     }
