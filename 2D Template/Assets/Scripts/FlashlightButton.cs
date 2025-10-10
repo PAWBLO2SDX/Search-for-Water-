@@ -3,7 +3,8 @@ using UnityEngine.UI;
 
 public class FlashlightButton : MonoBehaviour
 {
-   public void OnFlashlightButtonClick()
+    public GameObject PickAWay;
+   public void OnClickFlashlightButton()
     {
         Debug.Log("You Chose The Flashlight");
     }
