@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/EndCredits.unity
+    guid: def486eb4a1d6f84e8709d15cd076fa8
+  - enabled: 1
     path: Assets/Scenes/Cameron.unity
     guid: bd12dc9cb96eac345b1a87ec9ebe6360
   - enabled: 1
