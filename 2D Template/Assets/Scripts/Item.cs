@@ -7,7 +7,7 @@ using System.ComponentModel;
 using UnityEngine.InputSystem;
 
 [CreateAssetMenu(menuName = "Scriptable object/Item")]
-public class Item : ScriptableObject
+public class item : ScriptableObject
 {
     [Header("Only gameplay")]
 
