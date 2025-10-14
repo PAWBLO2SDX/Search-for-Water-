@@ -12,6 +12,7 @@ public class Dialogue : MonoBehaviour
     public float textSpeed;
 
     private int index;
+    private bool isRunning;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,6 +39,13 @@ public class Dialogue : MonoBehaviour
     }
     public void StartDialogue()
     {
+        if (isRunning)
+        {
+            return;
+        }
+
+        isRunning = true;
+
         textComponent.text = string.Empty;
         index = 0;
         StartCoroutine(TypeLine());
@@ -64,6 +72,7 @@ public class Dialogue : MonoBehaviour
         {
             onDialogue.Invoke();
             gameObject.SetActive(false);
+            isRunning = false;
         }
     }
 }
