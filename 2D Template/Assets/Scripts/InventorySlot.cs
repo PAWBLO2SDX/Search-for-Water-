@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 public class InventorySlot : MonoBehaviour, IDropHandler
 {
+    public static int Length { get; internal set; }
+
     public void OnDrop(PointerEventData eventData)
     {
         if (transform.childCount == 0) { 
