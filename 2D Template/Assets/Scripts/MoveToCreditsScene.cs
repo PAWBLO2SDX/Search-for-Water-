@@ -1,0 +1,13 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class MoveToCreditsScene : MonoBehaviour
+{
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "Player")
+        {
+            SceneManager.LoadScene("EndCredits");
+        }
+    }
+}
