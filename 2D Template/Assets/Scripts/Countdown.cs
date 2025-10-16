@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Countdown : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class Countdown : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentTime = 20;
+        currentTime = 60;
         currentCounter = 0;
         isCountingDown = true;
         slider.value = 0;
@@ -31,7 +32,7 @@ public class Countdown : MonoBehaviour
             currentTime -= Time.deltaTime;
             currentCounter += Time.deltaTime;
         }
-        if (isCountingDown == false && currentTime <= 20)
+        if (isCountingDown == false && currentTime <= 60)
         {
             currentTime += Time.deltaTime;
             currentCounter -= Time.deltaTime;
@@ -40,6 +41,7 @@ public class Countdown : MonoBehaviour
         if (currentTime <= 0)
         {
             Destroy(player);
+            SceneManager.LoadScene("MainMenu");
         }
         if (currentTime <= 10 && plrScript.console == false)
         {
